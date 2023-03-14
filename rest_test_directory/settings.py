@@ -16,4 +16,15 @@ DOMAIN = {
             }
         }
     },
+    'untagged_images': {
+        'schema': {
+            'img_link':{
+                'type': 'string'
+            },
+            'tagged':{
+                'type': 'string'
+            }
+
+        }
+    }
 }
