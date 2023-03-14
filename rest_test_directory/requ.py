@@ -25,7 +25,7 @@ def get_image(tag):
 
         img_data = requests.get(res).content
         print(img_data)
-        with open('image_name.jpg', 'wb') as handler:
+        with open('../image_name.jpg', 'wb') as handler:
             handler.write(img_data)
     except:
         return 'get_image func failed'
