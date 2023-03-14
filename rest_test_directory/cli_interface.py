@@ -18,3 +18,4 @@ elif desicion == '2':
     requ.upload_untagged_image(link)
     print('Picture succesfully uploaded')
 
+
