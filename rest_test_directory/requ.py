@@ -13,6 +13,8 @@ def load_untagged():
     response = requests.request("GET", url, headers=headers, data=payload)
 
     return response.json()
+
+
 def load_tagged():
     import requests
 
@@ -24,6 +26,7 @@ def load_tagged():
     response = requests.request("GET", url, headers=headers, data=payload)
 
     return response.json()
+
 
 def get_image(tag):
     try:
@@ -42,7 +45,6 @@ def get_image(tag):
         return 'get_image func failed', False
 
 
-
 def upload_image(img, tag):
     try:
         url = 'http://127.0.0.1:5000/image'
@@ -54,6 +56,7 @@ def upload_image(img, tag):
         response = requests.post(url, headers=headers, data=payload)
     except:
         return 'upload_image func failed'
+
 
 def upload_untagged_image(img):
     try:
