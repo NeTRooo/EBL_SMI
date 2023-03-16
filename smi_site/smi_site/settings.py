@@ -130,6 +130,8 @@ STATICFILES_DIRS = [
     BASE_DIR / "staticfiles",
 ]
 
+TAGGIT_CASE_INSENSITIVE = True
+
 SITE_ID=1
 
 # Default primary key field type
