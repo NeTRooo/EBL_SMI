@@ -10,8 +10,21 @@ from .forms import *
 import datetime
 
 def SearchPage(request):
-    return render(request, 'main/search.html')
-
+    if request.method == 'POST':
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            response = requests.get(f"http://localhost:8000/api/v1/tag?search={form.cleaned_data['search']}")
+            if response.json() == []:
+                form = SearchForm()
+                return render(request, 'main/search.html', {"form": form})
+            else:
+                return redirect(f"http://localhost:8000/search/{form.cleaned_data['search']}/")
+        else:
+            form = SearchForm()
+            return render(request, 'main/search.html', {"form": form})
+    else:
+        form = SearchForm()
+        return render(request, 'main/search.html', {"form": form})
 
 def SearchPageFilter(request, search):
     response = requests.get(f'http://localhost:8000/api/v1/tag?search={search}')
