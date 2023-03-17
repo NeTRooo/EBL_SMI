@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'rest_framework',
+    'django_filters',
     'taggit',
+    'taggit_serializer',
     'main',
 ]
 
@@ -129,6 +132,10 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     BASE_DIR / "staticfiles",
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
 
 TAGGIT_CASE_INSENSITIVE = True
 
