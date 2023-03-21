@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Поиск по тегам</title>
+    <style>
+        .item{background-color:rgb(201, 202, 204);border-radius:15px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;}
+        .item a{color:red}
+    </style>
 </head>
 <body>
-    <div>
-        <p>{{ content.0.upload_file }}</p><br>
-        <img src="{{ content.0.upload_file }}">
-    </div>
+    {% for con in content %}
+        <div class="item">
+            <p>{{ con.upload_file }}</p><br>
+            <a href="{{ con.upload_file }}" download="proposed_file_name">Download</a><br>
+            <img src="{{ con.upload_file }}">
+        </div>
+    {% endfor %}
 </body>
 </html>
