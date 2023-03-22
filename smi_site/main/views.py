@@ -9,6 +9,9 @@ from .models import Upload
 from .forms import *
 import datetime
 
+def test(request):
+    return render(request, 'main/shablon.html')
+
 def SearchPage(request):
     if request.method == 'POST':
         form = SearchForm(request.POST)

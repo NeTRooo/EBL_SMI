@@ -1,0 +1,6 @@
+.search_item{width:760px;background-color:#fff;border-radius:5px;padding:30px 32px;}
+.search_item:first-of-type input{width:calc(100% - 75px);height:32px;}
+.search_item:last-of-type{margin-top:16px;}
+.search_item input{width:100%;border:1px solid #000000;border-radius:5px;}
+.page_search button{margin-top:16px;}
+

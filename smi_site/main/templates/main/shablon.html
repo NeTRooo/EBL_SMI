@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/shablon.css' %}">
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+    <div class="center">
+        <div class="nav">
+            <img src="{% static 'main/img/if_logo.png' %}">
+        </div>
+        <div class="content">
+            <div class="page_button">
+                {% url 'upload_page' as url_upload %}
+                <a {% if url_upload == request.path %}href="#"{% else %}href="/upload"{% endif %}>
+                    <div class="button_item {% if url_upload == request.path %}_active{% endif %}">
+                        <p class="ui_16_r">Загрузка файла</p>
+                    </div>
+                </a>
+                {% url 'search_page' as url_search %}
+                <a class="ui_16_r" {% if url_search == request.path %}href="#"{% else %}href="/search"{% endif %}>
+                    <div class="button_item {% if url_search == request.path %}_active{% endif %}">
+                        <p class="ui_16_r">Поиск файла</p>
+                    </div>
+                </a>
+            </div>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="footer">
+            <img src="{% static 'main/img/ebl_logo.png' %}">
+        </div>
+    </div>
+</body>
+</html>

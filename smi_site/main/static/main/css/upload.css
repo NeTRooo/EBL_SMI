@@ -1,0 +1,4 @@
+.upload_item{width:760px;background-color:#fff;border-radius:5px;padding:30px 32px;}
+.upload_item:last-of-type{margin-top:16px;}
+.upload_item input{width:100%;border:1px solid #000000;border-radius:5px;}
+.page_upload button{margin-top:16px;}

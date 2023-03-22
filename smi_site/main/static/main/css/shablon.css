@@ -1,0 +1,13 @@
+.center,.content{display:flex;align-items:center;justify-content:center;flex-direction:column;}
+.center{min-height:100%;padding:19px 220px;}.content{min-width:100%;}
+body{background: radial-gradient(97.64% 97.64% at 50% 2.36%, #CBCFF4 0%, #F5F5F5 93.94%);}
+.page_button{min-width:100%;display:flex;align-items:center;justify-content:center;margin-top:64px;margin-bottom:24px;}
+.button_item{border:1px solid #000000;border-radius:5px;background-color:transparent;}.button_item{padding:8px 54px;}
+.button_item:first-of-type{margin-right:48px;}
+._active{background-color:#000;color:#fff;}
+.button_item p{cursor:pointer;}
+
+
+
+
+.footer{margin-top:auto;}.footer img{height:80px;}
