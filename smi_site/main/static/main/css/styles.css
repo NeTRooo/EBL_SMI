@@ -3,7 +3,7 @@
 /* reset-standart-css */
 *{padding:0;margin:0;border:0;}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}:focus,:active{outline:none;}a:focus,a:active{outline:none;}nav,footer,header,aside{display:block;}html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}input,button,textarea{font-family:inherit;}input::-ms-clear{display:none;}button{cursor:pointer;}button::-moz-focus-inner{padding:0;border:0;}a,a:visited{text-decoration:none;}a:hover{text-decoration:none;}ul li{list-style:none;}img{vertical-align:top;}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:400;}a{border:0;text-decoration:none;color:unset;}
 /* Fonts */
-*{font-family:'Helvetica';}p{cursor:default;}
+*{font-family:'Helvetica' !important;}p{cursor:default;}
 .ui_18_r{font-size:18px;line-height:25px;font-weight:normal;}.ui_18_m{font-weight:500;font-size:18px;line-height:25px}.ui_18_sb{font-weight:600;font-size:18px;line-height:24px}.ui_18_b{font-weight:700;font-size:18px;line-height:24px}.ui_18_eb{font-weight:800;font-size:18px;line-height:24px}.ui_18_bl{font-weight:900;font-size:18px;line-height:24px}
 .ui_16_r{font-size:16px;line-height:24px;font-weight:normal;}.ui_16_m{font-weight:500;font-size:16px;line-height:24px}.ui_16_sb{font-weight:600;font-size:16px;line-height:24px}.ui_16_b{font-weight:700;font-size:16px;line-height:24px}.ui_16_eb{font-weight:800;font-size:16px;line-height:24px}.ui_16_bl{font-weight:900;font-size:16px;line-height:24px}
 .ui_14_r{font-size:14px;line-height:22px;font-weight:normal;}.ui_14_m{font-weight:500;font-size:14px;line-height:22px}.ui_14_sb{font-weight:600;font-size:14px;line-height:22px}.ui_14_b{font-weight:700;font-size:14px;line-height:22px}.ui_14_eb{font-weight:800;font-size:14px;line-height:22px}.ui_14_bl{font-weight:900;font-size:14px;line-height:22px}
@@ -12,7 +12,7 @@ h1,.h1{font-size:40px;line-height:45px;font-weight:700;cursor:default;}h2,.h2{fo
 h3,.h3{font-size:32px;line-height:39px;font-weight:700;cursor:default;}h4,.h4{font-size:28px;line-height:39px;font-weight:700;cursor:default;}
 h5,.h5{font-size:24px;line-height:30px;font-weight:500;cursor:default;}h6,.h6{font-size:18px;line-height:25px;font-weight:700;cursor:default;}
 .h4_r{font-size:28px;line-height:33px;font-weight:400;cursor:default;}.h4_m{font-size:28px;line-height:33px;font-weight:500;cursor:default;}
-.h6_20{font-size:20px;line-height:23px;font-weight:700;cursor:default;}
+.h6_20{font-size:20px;line-height:23px;font-weight:700;cursor:default;}.ui_12_r{font-size:12px;line-height:14px;font-weight:normal;}
 .ui_left{text-align:left;}.ui_center{text-align:center}.ui_right{text-align:right;}button{cursor:pointer;}
 /* Colors */
 :root{

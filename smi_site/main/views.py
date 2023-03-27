@@ -10,7 +10,8 @@ from .forms import *
 import datetime
 
 def test(request):
-    return render(request, 'main/shablon.html')
+    return redirect('upload_page')
+    # return render(request, 'main/shablon.html')
 
 def SearchPage(request):
     if request.method == 'POST':

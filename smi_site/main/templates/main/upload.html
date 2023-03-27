@@ -11,9 +11,9 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="page_upload">
-            <div class="upload_item"><input type="file" name="upload_file" required="" id="id_upload_file"></div>
-            <div class="upload_item"><input type="text" name="m_tags" required="" id="id_m_tags"></div>
-            <button class="button" type="submit">Отправить</button>
+            <div class="upload_item input_container"><input type="file" name="upload_file" required="" id="id_upload_file" class="ui_12_r"></div>
+            <div class="upload_item"><textarea name="m_tags" required="" id="id_m_tags" rows="5" cols="33" placeholder="Введите теги через запятую" class="ui_12_r"></textarea></div>
+            <button class="button ui_14_b" type="submit">Отправить</button>
         </div>
     </form>
 {% endblock %}
