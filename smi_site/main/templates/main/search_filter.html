@@ -1,16 +1,44 @@
+{% extends 'main/shablon.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Поиск по тегам</title>
-    <style>
-        .item{background-color:rgb(201, 202, 204);border-radius:15px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;}
-        .item a{color:red}
-    </style>
-</head>
+
+{% block title %}Поиск файла{% endblock  %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/search.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/search_filter.css' %}">
+    <script src="{% static 'main/js/content_error.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="search_item">
+            <div class="text-field__group">
+                <input class="text-field__input" type="search" name="search" maxlength="128" required="" id="id_search">
+                <button class="text-field__btn" type="submit">Поиск</button>
+            </div>
+        </div>
+    </form>
+    <div class="results">
+        <p class="ui_14_b">Результаты</p>
+        <div class="res_items">
+            {% for con in content %}
+                <div class="res_item">
+                    <a href="{{ con.upload_file }}" download="proposed_file_name">
+                        <img id="{{ con.upload_file }}" src="{{ con.upload_file }}" alt="http://localhost:8000/static/main/img/passs.jpg" onerror="standby('{{ con.upload_file }}')">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{% comment %} <style>
+    .item{background-color:rgb(201, 202, 204);border-radius:15px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;}
+    .item a{color:red}
+</style>
 <body>
     {% for con in content %}
         <div class="item">
@@ -19,5 +47,4 @@
             <img src="{{ con.upload_file }}">
         </div>
     {% endfor %}
-</body>
-</html>
+</body> {% endcomment %}

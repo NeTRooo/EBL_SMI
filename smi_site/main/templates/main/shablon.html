@@ -25,8 +25,9 @@
                     </div>
                 </a>
                 {% url 'search_page' as url_search %}
-                <a class="ui_16_r" {% if url_search == request.path %}href="#"{% else %}href="/search"{% endif %}>
-                    <div class="button_item {% if url_search == request.path %}_active{% endif %}">
+                {% url 'SearchPageFilter' as url_searchfilter %}
+                <a class="ui_16_r" {% if url_search == request.path %}href="#"{% elif url_searchfilter == request.path %}href="#"{% else %}href="/search"{% endif %}>
+                    <div class="button_item {% if url_search == request.path %}_active{% elif url_searchfilter == request.path %}_active{% endif %}">
                         <p class="ui_16_r">Поиск файла</p>
                     </div>
                 </a>
